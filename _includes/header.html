@@ -34,7 +34,8 @@
               <ul class='dropdown'>
                 {% for child in item.children %}
                   <li>
-                    <a href="{{site.url}}/{{ child.path }}">{{ child.name }}</a>
+                    <a href="{{base}}/{{ child.path }}">{{ child.name }}</a>
+                    <!-- <a href="{{site.url}}/{{ child.path }}">{{ child.name }}</a> -->
                   </li>
                 {% endfor %}
               </ul>
