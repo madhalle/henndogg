@@ -5,12 +5,15 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  #works for deployment to load css
   {% include base.html %}
+
   <link rel="stylesheet" href="{{base}}/css/foundation.css">
   <link rel="stylesheet" href="{{base}}/css/style.css">
   <link rel="stylesheet" href="{{base}}/css/fontello.css">
   <link rel="stylesheet" href="{{base}}/css/font-awesome.css">
 
+  #works for local host
   <!-- <link rel="stylesheet" href="{{ "css/foundation.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/style.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/fontello.css" | prepend: site.baseurl }}">
@@ -34,9 +37,9 @@
     })(Tc.$);
   </script>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" media="screen" rel="stylesheet" type="text/css" />
-  <script src="{{ "javascripts/masonry.pkgd.js" | prepend: base }}" type="text/javascript"></script>
-  <script src="{{ "javascripts/imagesloaded.pkgd.min.js" | prepend: base }}" type="text/javascript"></script>
-  <script src="{{ "javascripts/slick.min.js" | prepend: base }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/masonry.pkgd.js" | prepend: base }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/imagesloaded.pkgd.min.js" | prepend: base }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/slick.min.js" | prepend: base }}" type="text/javascript"></script>
 
   <link rel="canonical" href="{{ base | replace:'/index.html','' | prepend: base | prepend: base }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: base | prepend: base }}" />
