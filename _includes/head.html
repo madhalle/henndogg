@@ -5,7 +5,7 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  #works for deployment to load css
+  <!-- #works for deployment to load css -->
   {% include base.html %}
 
   <link rel="stylesheet" href="{{base}}/css/foundation.css">
@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="{{base}}/css/fontello.css">
   <link rel="stylesheet" href="{{base}}/css/font-awesome.css">
 
-  #works for local host
+  <!-- #works for local host -->
   <!-- <link rel="stylesheet" href="{{ "css/foundation.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/style.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/fontello.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/font-awesome.css" | prepend: site.baseurl }}"> -->
 
-  <script src="{{ "javascripts/libs.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/libs.js" | prepend: base }}" type="text/javascript"></script>
   <script>
     // terrificjs bootstrap
     (function($) {
