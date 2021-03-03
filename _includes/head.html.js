@@ -26,7 +26,7 @@
             var $page = $('body');
             var config = {
               dependencyPath: {
-                plugin: 'javascripts/'
+                plugin: '{{base}}/javascripts/'
               }
             }
             var application = new Tc.Application($page, config);
