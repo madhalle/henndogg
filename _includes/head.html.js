@@ -7,10 +7,10 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <!-- #works for deployment to load css -->
   {% include base.html %}
-  <script src="{{base}}/javascripts/masonry.pkgd.js" type="text/javascript"></script>
-  <script src="{{base}}/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-  <script src="{{base}}/javascripts/slick.min.js" type="text/javascript"></script>
-  <script src="{{base}}/javascripts/app.js" type="text/javascript"></script>
+  <script src="{{site.url}}/javascripts/masonry.pkgd.js" type="text/javascript"></script>
+  <script src="{{site.url}}/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="{{site.url}}/javascripts/slick.min.js" type="text/javascript"></script>
+  <script src="{{site.url}}/javascripts/app.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="{{base}}/css/foundation.css">
   <link rel="stylesheet" href="{{base}}/css/style.css">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{base}}/css/font-awesome.css">
 
 
-  <script src="{{base}}/javascripts/libs.js.bundle" type="text/javascript"></script>
+  <script src="{{site.url}}/javascripts/libs.js.bundle" type="text/javascript"></script>
   <script>
     // terrificjs bootstrap
     (function($) {
@@ -26,7 +26,7 @@
             var $page = $('body');
             var config = {
               dependencyPath: {
-                plugin: '{{base}}/javascripts/'
+                plugin: 'javascripts/'
               }
             }
             var application = new Tc.Application($page, config);
