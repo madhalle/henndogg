@@ -7,13 +7,13 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <!-- #works for deployment to load css -->
   {% include base.html %}
+  <script src="{{base}}/javascripts/jquery.countTo.js" type="text/javascript"></script>
+  <script src="{{base}}/javascripts/jquery.validate.js" type="text/javascript"></script>
+  <script src="{{base}}/javascripts/jquery.appear.js" type="text/javascript"></script>
   <script src="{{base}}/javascripts/masonry.pkgd.js" type="text/javascript"></script>
   <script src="{{base}}/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
   <script src="{{base}}/javascripts/slick.min.js" type="text/javascript"></script>
   <script src="{{base}}/javascripts/app.js" type="text/javascript"></script>
-  <script src="{{base}}/javascripts/jquery.countTo.js" type="text/javascript"></script>
-  <script src="{{base}}/javascripts/jquery.validate.js" type="text/javascript"></script>
-  <script src="{{base}}/javascripts/jquery.appear.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="{{base}}/css/foundation.css">
   <link rel="stylesheet" href="{{base}}/css/style.css">
