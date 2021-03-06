@@ -27,7 +27,7 @@ jQuery.extend({
     return this
   }
 })(jQuery.fn.removeClass);
-
+Foundation.addToJquery($);
 jQuery(document).ready(function() {
   jQuery('html').removeClass('no-js');
 });
@@ -800,5 +800,3 @@ jQuery(document).foundation();
     }
   })
 })(Tc.$);
-
-
