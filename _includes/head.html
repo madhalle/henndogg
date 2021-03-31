@@ -3,21 +3,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  {% include base.html %}
-  <link rel="stylesheet" href="{{base}}/css/foundation.css">
-  <link rel="stylesheet" href="{{base}}/css/style.css">
-  <link rel="stylesheet" href="{{base}}/css/fontello.css">
-  <link rel="stylesheet" href="{{base}}/css/font-awesome.css">
-
-  <script src="{{base}}/javascripts/modernizr.foundation.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+			    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			    crossorigin="anonymous"></script>
+          <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <!-- #works for deployment to load css -->
+  {% include base.html %}
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> -->
   <script src="{{base}}/javascripts/slick.min.js"></script>
   <script src="{{base}}/doc/assets/js/documentation.js"></script>
   <script src="{{base}}/javascripts/masonry.pkgd.js"></script>
@@ -27,9 +21,14 @@
   <script src="{{base}}/javascripts/jquery.countTo.js"></script>
   <script src="{{base}}/javascripts/jquery.appear.js"></script>
   <script src="{{base}}/javascripts/jquery-2.1.0.js"></script>
+  <!-- <script src="{{base}}/javascripts/imagesloaded.pkgd.min.js"></script> -->
   <script src="{{base}}/javascripts/foundation.js"></script>
   <script src="{{base}}/javascripts/app.js"></script>
 
+  <link rel="stylesheet" href="{{base}}/css/foundation.css">
+  <link rel="stylesheet" href="{{base}}/css/style.css">
+  <link rel="stylesheet" href="{{base}}/css/fontello.css">
+  <link rel="stylesheet" href="{{base}}/css/font-awesome.css">
 
 
   <script src="{{base}}/javascripts/libs.js.bundle"></script>
