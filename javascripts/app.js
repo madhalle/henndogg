@@ -618,10 +618,10 @@ jQuery(document).foundation();
       window.msnry = msnry;
 
       $('.gallery', $ctx).imagesLoaded( function() {
-        // setTimeout(function() {})
-        // console.log($('#main').width());
-        // console.log($('body').width());
-        // console.log($('.gallery').width());
+        setTimeout(function() {})
+        console.log($('#main').width());
+        console.log($('body').width());
+        console.log($('.gallery').width());
         msnry.layout();
       });
 
