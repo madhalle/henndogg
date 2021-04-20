@@ -91,16 +91,6 @@ works:
     title: A beautiful day
     desc: "Design &amp; Development"
 ---
-$("#gallery-nav a").click(function(){
-   var dc = $(this).attr('data-cat');
-    if(dc=="all") {
-      $('.portfolio-item').show();
-       return;
-     }
-    $('.portfolio-item').each(function(){
-       if($(this).attr('data-cat').indexOf(dc) < 0) $(this).hide(); else $(this).show();
-    });
- });
 
 <div class='two spacing'></div>
 <div class='spacing'></div>
