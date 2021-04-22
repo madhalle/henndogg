@@ -20,7 +20,6 @@
   <script src="{{base}}/javascripts/imagesloaded.pkgd.min.js"></script>
   <!-- <script src="{{base}}/javascripts/modernizr.foundation.js"></script> -->
   <script src="{{base}}/doc/assets/js/documentation.js"></script>
-  <script src="{{base}}/javascripts/app.js"></script>
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="{{base}}/css/foundation.css">
@@ -46,6 +45,8 @@
         });
     })(Tc.$);
   </script>
+  <script src="{{base}}/javascripts/app.js"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" media="screen" rel="stylesheet" type="text/css" />
 
   <link rel="canonical" href="{{ base | replace:'/index.html','' | prepend: base | prepend: base }}">
