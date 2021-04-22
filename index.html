@@ -93,80 +93,81 @@ works:
 ---
 
 <div class='two spacing'></div>
-<div class='spacing'></div>
-<div class='mod modMasonryGallery'>
-  <div class='gallery-nav'>
-    <ul>
-      <li class='current'>
-        <a data-cat='all' href='#'>All</a>
-      </li>
-      <li>
-        <a data-cat='landscapes' href='#'>Landscapes</a>
-      </li>
-      <li>
-        <a data-cat='portraits' href='#'>Portraits</a>
-      </li>
-      <li>
-        <a data-cat='people' href='#'>People</a>
-      </li>
-      <li>
-        <a data-cat='outdoors' href='#'>Outdoors</a>
-      </li>
-      <li>
-        <a data-cat='ski' href='#'>Ski</a>
-      </li>
-    </ul>
+  <div class='spacing'></div>
+    <div class='mod modMasonryGallery'>
+      <div class='gallery-nav'>
+        <ul>
+          <li class='current'>
+            <a data-cat='all' href='#'>All</a>
+          </li>
+          <li>
+            <a data-cat='landscapes' href='#'>Landscapes</a>
+          </li>
+          <li>
+            <a data-cat='portraits' href='#'>Portraits</a>
+          </li>
+          <li>
+            <a data-cat='people' href='#'>People</a>
+          </li>
+          <li>
+            <a data-cat='outdoors' href='#'>Outdoors</a>
+          </li>
+          <li>
+            <a data-cat='ski' href='#'>Ski</a>
+          </li>
+        </ul>
+      </div>
+      <ul class='gallery'>
+        {% for image in site.static_files %}
+            {% if image.path contains 'images/bangers/ski' %}
+                <li class='ski'>
+                  <div class='overlay'>
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                  </div>
+                </li>
+            {% endif %}
+        {% endfor %}
 
-    <ul class='gallery'>
-      {% for image in site.static_files %}
-          {% if image.path contains 'images/bangers/ski' %}
-              <li class='ski'>
-                <div class='overlay'>
-                  <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                </div>
-              </li>
-          {% endif %}
-      {% endfor %}
+        {% for image in site.static_files %}
+            {% if image.path contains 'images/bangers/landscape' %}
+                <li class='landscape'>
+                  <div class='overlay'>
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                  </div>
+                </li>
+            {% endif %}
+        {% endfor %}
 
-      {% for image in site.static_files %}
-          {% if image.path contains 'images/bangers/landscape' %}
-              <li class='landscape'>
-                <div class='overlay'>
-                  <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                </div>
-              </li>
-          {% endif %}
-      {% endfor %}
+        {% for image in site.static_files %}
+            {% if image.path contains 'images/bangers/outdoors' %}
+                <li class='outdoors'>
+                  <div class='overlay'>
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                  </div>
+                </li>
+            {% endif %}
+        {% endfor %}
 
-      {% for image in site.static_files %}
-          {% if image.path contains 'images/bangers/outdoors' %}
-              <li class='outdoors'>
-                <div class='overlay'>
-                  <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                </div>
-              </li>
-          {% endif %}
-      {% endfor %}
+        {% for image in site.static_files %}
+            {% if image.path contains 'images/bangers/people' %}
+                <li class='people'>
+                  <div class='overlay'>
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                  </div>
+                </li>
+            {% endif %}
+        {% endfor %}
 
-      {% for image in site.static_files %}
-          {% if image.path contains 'images/bangers/people' %}
-              <li class='people'>
-                <div class='overlay'>
-                  <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                </div>
-              </li>
-          {% endif %}
-      {% endfor %}
-
-      {% for image in site.static_files %}
-          {% if image.path contains 'images/bangers/portraits' %}
-              <li class='people'>
-                <div class='overlay'>
-                  <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                </div>
-              </li>
-          {% endif %}
-      {% endfor %}
-    </ul>
+        {% for image in site.static_files %}
+            {% if image.path contains 'images/bangers/portraits' %}
+                <li class='people'>
+                  <div class='overlay'>
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                  </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
