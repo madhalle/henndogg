@@ -119,6 +119,15 @@ works:
       </div>
       <ul class='gallery'>
         {% for image in site.static_files %}
+          {% if image.path contains 'images/bangers/landscape' %}
+            <li class='landscape'>
+              <div class='overlay'>
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% for image in site.static_files %}
             {% if image.path contains 'images/bangers/ski' %}
                 <li class='ski'>
                   <div class='overlay'>
@@ -128,15 +137,6 @@ works:
             {% endif %}
         {% endfor %}
 
-        {% for image in site.static_files %}
-            {% if image.path contains 'images/bangers/landscape' %}
-                <li class='landscape'>
-                  <div class='overlay'>
-                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                  </div>
-                </li>
-            {% endif %}
-        {% endfor %}
 
         {% for image in site.static_files %}
             {% if image.path contains 'images/bangers/outdoors' %}

@@ -234,6 +234,22 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           height: $topbar-height;
           line-height: $topbar-height;
         }
+      .toggle-topbar-icon {
+        position: absolute;
+        #{$topbar-menu-icon-position}: 0;
+        top: 0;
+
+        a {
+          color: $topbar-link-color;
+          // text-transform: $topbar-menu-link-transform;
+          font-size: $topbar-menu-link-font-size;
+          font-weight: $topbar-menu-link-weight;
+          position: relative;
+          display: block;
+          padding: 0 $topbar-link-padding;
+          height: $topbar-height;
+          line-height: $topbar-height;
+        }
 
         // Adding the class "menu-icon" will add the 3-line icon people love and adore.
         &.menu-icon {
